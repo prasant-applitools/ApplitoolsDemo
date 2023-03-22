@@ -93,7 +93,7 @@ public class ApplitoolsDemo {
 
 		ChromeOptions chromeOption = new ChromeOptions();
 		//chromeOption.addArguments("--remote-allow-origins=*");
-		chromeOption.setHeadless(false);
+		chromeOption.setHeadless(true);
 
 		this.webDriver = new ChromeDriver(chromeOption);
 
