@@ -100,6 +100,7 @@ public class ApplitoolsDemo {
             chromeOption.addArguments("--disable-dev-shm-usage");
             chromeOption.addArguments("disable-infobars");
             chromeOption.addArguments("--disable-extensions");
+		
 
 		this.webDriver = new ChromeDriver(chromeOption);
 
