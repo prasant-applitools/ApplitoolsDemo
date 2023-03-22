@@ -92,7 +92,7 @@ public class ApplitoolsDemo {
 		eyes.setConfiguration(config);
 
 		ChromeOptions chromeOption = new ChromeOptions();
-		chromeOption.addArguments("--remote-allow-origins=*");
+		//chromeOption.addArguments("--remote-allow-origins=*");
 		chromeOption.setHeadless(false);
 
 		this.webDriver = new ChromeDriver(chromeOption);
