@@ -95,11 +95,11 @@ public class ApplitoolsDemo {
 		chromeOption.addArguments("--remote-allow-origins=*");
 		chromeOption.setHeadless(true);
 		
-		chromeOption.addArguments('--no-sandbox')
-            chromeOption.addArguments('--disable-gpu')
-            chromeOption.addArguments('--disable-dev-shm-usage')
-            chromeOption.addArguments('disable-infobars')
-            chromeOption.addArguments("--disable-extensions")
+		chromeOption.addArguments("--no-sandbox");
+            chromeOption.addArguments("--disable-gpu");
+            chromeOption.addArguments("--disable-dev-shm-usage");
+            chromeOption.addArguments("disable-infobars");
+            chromeOption.addArguments("--disable-extensions");
 
 		this.webDriver = new ChromeDriver(chromeOption);
 
