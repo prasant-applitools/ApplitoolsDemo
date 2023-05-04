@@ -114,7 +114,7 @@ public class ApplitoolsDemo {
 	@Test
 	public void applitoolsDemo() throws InterruptedException {
 		// Load the home page.
-		this.webDriver.get("https://www.demo.applitools.com");
+		this.webDriver.get("https://demo.applitools.com/");
 
 		Thread.sleep(2000);
 
