@@ -40,15 +40,15 @@ jobs:
     - name: Branch Name
       run: echo ${GITHUB_REF##*/}
       
-  batch-completion-notification:
-    environment: Applitools
-    needs: run-tests
-    if: always()
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print
-        run: echo ${{ env.APPLITOOLS_API_KEY }}
-      - name: Update Applitools batch status 
-        uses: wei/curl@v1.1.1
-        with:
-          args: --location --request POST https://eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${{ env.APPLITOOLS_BATCH_ID }}/complete?apiKey=${{ secrets.APPLITOOLS_API_KEY }}
+#   batch-completion-notification:
+#     environment: Applitools
+#     needs: run-tests
+#     if: always()
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Print
+#         run: echo ${{ env.APPLITOOLS_API_KEY }}
+#       - name: Update Applitools batch status 
+#         uses: wei/curl@v1.1.1
+#         with:
+#           args: --location --request POST https://eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${{ env.APPLITOOLS_BATCH_ID }}/complete?apiKey=${{ secrets.APPLITOOLS_API_KEY }}
