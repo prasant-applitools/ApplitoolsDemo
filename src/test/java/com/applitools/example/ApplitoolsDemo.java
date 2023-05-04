@@ -5,8 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import java.time.Duration;
 import java.util.Date;
 
-
-
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -103,7 +101,6 @@ public class ApplitoolsDemo {
             chromeOption.addArguments("--disable-dev-shm-usage");
             chromeOption.addArguments("disable-infobars");
             chromeOption.addArguments("--disable-extensions");
-		
 
 		this.webDriver = new ChromeDriver(chromeOption);
 
@@ -116,23 +113,10 @@ public class ApplitoolsDemo {
 	@Test
 	public void applitoolsDemo() throws InterruptedException {
 		
-		
 		// Load the home page.
 		this.webDriver.get("https://demo.applitools.com/");
 
 		Thread.sleep(2000);
-
-		/*try {
-
-			WebElement floatingElem = this.webDriver.findElement(By.xpath("//video[@class='css-orcsns']/.."));
-
-			String rmCommand = "arguments[0].remove();";
-
-			((JavascriptExecutor) this.webDriver).executeScript(rmCommand, floatingElem);
-
-		} catch (Exception e) {
-
-		}*/
 
 		eyes.check(Target.window().lazyLoad().matchLevel(MatchLevel.STRICT)
 //        		.ignore(null)
