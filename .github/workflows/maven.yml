@@ -36,5 +36,8 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
+    - name: SHA
+      run: echo ${{ env.APPLITOOLS_BATCH_ID }}
+
     - name: Branch Name
       run: echo ${GITHUB_REF##*/}
