@@ -61,6 +61,7 @@ public class ApplitoolsDemo {
 		eyes = new Eyes(vgRunner);
 		BATCH = new BatchInfo(BATCH_NAME);
 		BATCH.setId(BATCH_ID);
+		BATCH.setNotifyOnCompletion(true);
 	}
 
 	@BeforeEach
@@ -149,6 +150,8 @@ public class ApplitoolsDemo {
 
 	@AfterAll
 	public static void onComplete() {
+		
+		BATCH.setCompleted(true);
 		if (vgRunner != null) {
 			TestResultsSummary allTestResults = vgRunner.getAllTestResults();
 			System.out.println(allTestResults);
