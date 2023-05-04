@@ -45,6 +45,8 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     steps:
+      - name: Print
+        run: echo ${{ env.APPLITOOLS_API_KEY }}
       - name: Update Applitools batch status 
         uses: wei/curl@v1.1.1
         with:
