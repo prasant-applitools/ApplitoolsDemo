@@ -76,6 +76,7 @@ public class ApplitoolsDemo {
 		// Use headless mode for Continuous Integration (CI) execution.
 		// Use headed mode for local development.
 		boolean headless = Boolean.parseBoolean(System.getenv().getOrDefault("HEADLESS", "false"));
+		
 
 		// Create a new batch for tests.
 		// A batch is the collection of visual tests.
