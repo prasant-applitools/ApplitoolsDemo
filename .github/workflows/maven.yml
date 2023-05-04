@@ -41,6 +41,7 @@ jobs:
       run: echo ${GITHUB_REF##*/}
       
   batch-completion-notification:
+    environment: Applitools
     needs: run-tests
     if: always()
     runs-on: ubuntu-latest
