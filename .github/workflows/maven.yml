@@ -9,7 +9,8 @@
 name: Java CI with Maven
 
 env:
-  APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
+  APPLITOOLS_BATCH_ID: ${{ github.sha }}
+  #${{ github.event.pull_request.head.sha || github.sha }}
   APPLITOOLS_BATCH_NAME: ${{ github.repository }}
   APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
   
