@@ -106,19 +106,19 @@ public class ApplitoolsDemo {
 		this.webDriver = new ChromeDriver(chromeOption);
 
 		eyes.open(this.webDriver, // WebDriver object to "watch"
-				"Housing.com_2", // The name of the app under test
-				"Housing_selenium", // The name of the test case
+				"CI Demo", // The name of the app under test
+				"CI Demo", // The name of the test case
 				new RectangleSize(1360, 800));
 	}
 
 	@Test
 	public void applitoolsDemo() throws InterruptedException {
 		// Load the home page.
-		this.webDriver.get("https://housing.com/buy-real-estate-nashik");
+		this.webDriver.get("https://www.demo.applitools.com");
 
 		Thread.sleep(2000);
 
-		try {
+		/*try {
 
 			WebElement floatingElem = this.webDriver.findElement(By.xpath("//video[@class='css-orcsns']/.."));
 
@@ -128,7 +128,7 @@ public class ApplitoolsDemo {
 
 		} catch (Exception e) {
 
-		}
+		}*/
 
 		eyes.check(Target.window().lazyLoad().matchLevel(MatchLevel.STRICT)
 //        		.ignore(null)
@@ -136,7 +136,7 @@ public class ApplitoolsDemo {
 
 				.fully().withName("Landing Page - Buy"));
 
-		WebDriverWait wait = new WebDriverWait(this.webDriver, Duration.ofSeconds(30));
+		/*WebDriverWait wait = new WebDriverWait(this.webDriver, Duration.ofSeconds(30));
 
 		WebElement topLocality = wait
 				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("section[data-q='topLocalities']")));
@@ -145,7 +145,7 @@ public class ApplitoolsDemo {
 
 		((JavascriptExecutor) this.webDriver).executeScript(scrCommand, topLocality);
 
-		eyes.check(Target.region(topLocality).withName("Top Locality - Nasik"));
+		eyes.check(Target.region(topLocality).withName("Top Locality - Nasik"));*/
 	}
 
 	@AfterEach
