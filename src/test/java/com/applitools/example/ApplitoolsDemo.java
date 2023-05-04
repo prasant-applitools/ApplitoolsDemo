@@ -79,7 +79,6 @@ public class ApplitoolsDemo {
 		// Use headed mode for local development.
 		boolean headless = Boolean.parseBoolean(System.getenv().getOrDefault("HEADLESS", "false"));
 		
-
 		// Create a new batch for tests.
 		// A batch is the collection of visual tests.
 		// Batches are displayed in the dashboard, so use meaningful names.
@@ -97,7 +96,6 @@ public class ApplitoolsDemo {
 		ChromeOptions chromeOption = new ChromeOptions();
 		chromeOption.addArguments("--remote-allow-origins=*");
 		chromeOption.setHeadless(true);
-		
 		
 		
 		chromeOption.addArguments("--no-sandbox");
