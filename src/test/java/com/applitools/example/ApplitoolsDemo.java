@@ -120,9 +120,6 @@ public class ApplitoolsDemo {
 		Thread.sleep(2000);
 
 		eyes.check(Target.window().lazyLoad().matchLevel(MatchLevel.STRICT)
-//        		.ignore(null)
-//        		.layout(xyz)
-
 				.fully().withName("Landing Page - Buy"));
 
 		/*WebDriverWait wait = new WebDriverWait(this.webDriver, Duration.ofSeconds(30));
